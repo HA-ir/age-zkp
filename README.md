@@ -1,4 +1,4 @@
-# 🛡️ Age Verification with Zero-Knowledge Proofs (ZKP)
+# Age Verification with Zero-Knowledge Proofs (ZKP)
 
 A Circom-based Zero-Knowledge circuit using Groth16 zk-SNARKs to prove a user is of legal age (`age >= 18`) without revealing their exact age or identity.
 
