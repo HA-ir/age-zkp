@@ -1,21 +1,21 @@
-# Age Verification with Zero-Knowledge Proofs (ZKP)
+# 🛡️ Age Verification with Zero-Knowledge Proofs (ZKP)
 
 A Circom-based Zero-Knowledge circuit using Groth16 zk-SNARKs to prove a user is of legal age (`age >= 18`) without revealing their exact age or identity.
 
-## Features
+## ✨ Features
 
-- **Privacy Preserving**: Proves `age >= 18` while keeping the exact age and salt private.
-- **Cryptographic Binding**: Uses Poseidon hash commitment (`Poseidon(age, salt) == commitment`) to link the proof to a specific identity/credential.
-- **Full Tooling Pipeline**: Automates circuit compilation, Powers of Tau ceremony, Phase 2 trusted setup, witness generation, proof generation, and verification.
-- **Smart Contract Ready**: Generates a Solidity verifier contract (`verifier.sol`) for on-chain proof validation.
+- 🔒 **Privacy Preserving**: Proves `age >= 18` while keeping the exact age and salt private.
+- 🔗 **Cryptographic Binding**: Uses Poseidon hash commitment (`Poseidon(age, salt) == commitment`) to link the proof to a specific identity/credential.
+- ⚙️ **Full Tooling Pipeline**: Automates circuit compilation, Powers of Tau ceremony, Phase 2 trusted setup, witness generation, proof generation, and verification.
+- 📜 **Smart Contract Ready**: Generates a Solidity verifier contract (`verifier.sol`) for on-chain proof validation.
 
-## Prerequisites
+## 📋 Prerequisites
 
 - [Node.js](https://nodejs.org/) (v16+) & `npm`
 - [Circom 2.0+](https://docs.circom.io/getting-started/installation/)
 - `snarkjs` (installed locally via npm dependencies)
 
-## Installation
+## 📦 Installation
 
 Clone the repository and install dependencies:
 
@@ -25,7 +25,7 @@ cd age-zkp
 npm install
 ```
 
-## Quick Start (Makefile)
+## 🚀 Quick Start (Makefile)
 
 Run the full setup, witness generation, and proof verification in one step:
 
@@ -37,7 +37,7 @@ make
 make prove AGE=25
 ```
 
-### Other Make Commands
+### 🛠️ Other Make Commands
 
 - `make setup` - One-time setup: compile circuit, generate PTAU, and perform Phase 2 setup.
 - `make prove` - Compute commitment, calculate witness, and generate zk-SNARK proof.
@@ -45,7 +45,7 @@ make prove AGE=25
 - `make clean` - Remove all generated build artifacts.
 - `make reset` - Clean build artifacts and remove `node_modules`.
 
-## Manual Pipeline (Step-by-Step)
+## 📖 Manual Pipeline (Step-by-Step)
 
 If you prefer running individual scripts:
 
@@ -69,13 +69,13 @@ bash scripts/05_prove.sh
 bash scripts/06_verify.sh
 ```
 
-## Circuit Details
+## 🔍 Circuit Details
 
 - **Circuit**: `age_verification.circom`
 - **Public Inputs**: `commitment`
 - **Private Inputs**: `age`, `salt`
 - **Public Output**: `valid` (1 if `age >= 18`, 0 otherwise)
 
-## License
+## 📄 License
 
 MIT
