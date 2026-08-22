@@ -1,0 +1,13 @@
+# Dependencies
+node_modules/
+package-lock.json
+
+# Circom & SnarkJS build artifacts and keys (large binaries / generated files)
+build/
+
+# OS / Editor files
+.DS_Store
+*.swp
+*.swo
+.vscode/
+.idea/
