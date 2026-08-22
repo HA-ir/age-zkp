@@ -78,4 +78,4 @@ bash scripts/06_verify.sh
 
 ## License
 
-ISC
+MIT
